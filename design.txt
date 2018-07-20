@@ -1,0 +1,36 @@
+Purpose:
+an app that can create a run order for a show that minimizes quick changes
+
+Classes:
+	Piece
+	Dancer
+	something to find run-order
+
+Conditions:
+	do not put dances with the same person next to each other (unless absolutely necessary)
+	minimize number of instances where someone has only one dance to change
+
+The Problem:
+	Given n recital pieces (d_1, d_2, ..., d_n):
+		for all pairs (d_i,d_j), there are x(i,j) people in both dances.
+
+Representation:
+	an undirected, weighted graph G = (V,E) where each vertex represents a recital piece and the weights of the edges are equal to the overlap in dancers.
+
+	Find the ordering that goes through all vertices and has the lowest cost
+
+
+
+
+p1: (d1,d2,d3)
+p2: (d2,d5,d6)
+p3: (d4)
+p4: (d4,d1)
+p5: (d7,d8,d10)
+p6: (....)
+.
+.
+.
+
+
+each p has a list of p's it cannot be next to and a list of p's it is 1 away from
